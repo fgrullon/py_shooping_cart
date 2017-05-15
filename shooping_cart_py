@@ -1,9 +1,13 @@
+import sales 
 
-cart = Chart()
-order = Order()
+cart = sales.Chart()
+order = sales.Order()
 order.get_input()
 
 while not order.quit:
 
-    order = Order()
+    cart.process(order)
+    order = sales.Order()
     order.get_input()
+
+print(cart)
