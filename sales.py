@@ -40,26 +40,5 @@ class Order:
            self.quit = True
        
 
-def add_to_cart(item, cart):
-    if not item in cart:
-        cart[item] = 0
-    cart[item] +=1
 
-def remove_from_cart(item, cart):
-    if item in cart and cart[item] > 1:
-        cart[item] -= 1
-    elif cart[item] == 1:
-        del cart[item]
-
-def process_order(order, cart):
-    command, item = order
-
-    if command == "a":
-        add_to_cart(item, cart)
-    elif command == "d":
-        remove_from_cart(item, cart)
-    elif command == "q":
-        return False
-
-    return True
     
